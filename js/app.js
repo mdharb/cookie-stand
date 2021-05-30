@@ -33,7 +33,7 @@ let seattle= {
     for (let i=0; i<workingHours.length; i++){
 
       let floorAvgCookies = Math.floor;
-      this.avgCookiesHour.push (floorAvgCookies(this.avgCookiesPerSale * this.randomCustomer[i]));
+      this.avgCookiesHour.push(floorAvgCookies(this.avgCookiesPerSale * this.randomCustomer[i]));
 
     }
 
@@ -48,8 +48,38 @@ seattle.randomCustomerPerHour();
 seattle.avgCookiesPerCustomer();
 // console.log(seattle.avgCookiesHour);
 
-let sumArrSeattle= seattle.avgCookiesHour[0] + seattle.avgCookiesHour[1]+ seattle.avgCookiesHour[2]+ seattle.avgCookiesHour[3]+ seattle.avgCookiesHour[4]+ seattle.avgCookiesHour[5]+ seattle.avgCookiesHour[6]+ seattle.avgCookiesHour[7]+ seattle.avgCookiesHour[8]+ seattle.avgCookiesHour[9]+ seattle.avgCookiesHour[10]+ seattle.avgCookiesHour[11]+ seattle.avgCookiesHour[12]+ seattle.avgCookiesHour[13];
+
+let sumArrSeattle=0;
+
+for(let i=0; i<workingHours.length; i++){
+
+  sumArrSeattle= sumArrSeattle + seattle.avgCookiesHour[i];
+}
 // console.log(sumArrSeattle);
+
+
+let parentSeattle = document.getElementById('seattle');
+
+let h3Seattle= document.createElement('h3');
+
+parentSeattle.appendChild(h3Seattle);
+
+h3Seattle.textContent= 'Seattle';
+
+let ulSeattle= document.createElement('ul');
+
+parentSeattle.appendChild(ulSeattle);
+
+for(let i=0; i<workingHours.length; i++){
+
+  let liSeattle= document.createElement('li');
+
+  ulSeattle.appendChild(liSeattle);
+
+  liSeattle.textContent= `${workingHours[i]}: ${seattle.avgCookiesHour[i]} cookies`;
+
+}
+// console.log(parentSeattle);
 
 
 
@@ -85,8 +115,37 @@ tokyo.randomCustomerPerHour();
 tokyo.avgCookiesPerCustomer();
 // console.log(tokyo.avgCookiesHour);
 
-let sumArrTokyo= tokyo.avgCookiesHour[0] + tokyo.avgCookiesHour[1]+ tokyo.avgCookiesHour[2]+ tokyo.avgCookiesHour[3]+ tokyo.avgCookiesHour[4]+ tokyo.avgCookiesHour[5]+ tokyo.avgCookiesHour[6]+ tokyo.avgCookiesHour[7]+ tokyo.avgCookiesHour[8]+ tokyo.avgCookiesHour[9]+ tokyo.avgCookiesHour[10]+ tokyo.avgCookiesHour[11]+ tokyo.avgCookiesHour[12]+ tokyo.avgCookiesHour[13];
+let sumArrTokyo=0;
+
+for(let i=0; i<workingHours.length; i++){
+
+  sumArrTokyo= sumArrTokyo + tokyo.avgCookiesHour[i];
+}
 // console.log(sumArrTokyo);
+
+
+let parentTokyo = document.getElementById('tokyo');
+
+let h3Tokyo= document.createElement('h3');
+
+parentTokyo.appendChild(h3Tokyo);
+
+h3Tokyo.textContent= 'Tokyo';
+
+let ulTokyo= document.createElement('ul');
+
+parentTokyo.appendChild(ulTokyo);
+
+for(let i=0; i<workingHours.length; i++){
+
+  let liTokyo= document.createElement('li');
+
+  ulTokyo.appendChild(liTokyo);
+
+  liTokyo.textContent= `${workingHours[i]}: ${tokyo.avgCookiesHour[i]} cookies`;
+
+}
+// console.log(parentTokyo);
 
 
 
@@ -122,8 +181,37 @@ dubai.randomCustomerPerHour();
 dubai.avgCookiesPerCustomer();
 // console.log(dubai.avgCookiesHour);
 
-let sumArrDubai= dubai.avgCookiesHour[0] + dubai.avgCookiesHour[1]+ dubai.avgCookiesHour[2]+ dubai.avgCookiesHour[3]+ dubai.avgCookiesHour[4]+ dubai.avgCookiesHour[5]+ dubai.avgCookiesHour[6]+ dubai.avgCookiesHour[7]+ dubai.avgCookiesHour[8]+ dubai.avgCookiesHour[9]+ dubai.avgCookiesHour[10]+ dubai.avgCookiesHour[11]+ dubai.avgCookiesHour[12]+ dubai.avgCookiesHour[13];
+let sumArrDubai=0;
+
+for(let i=0; i<workingHours.length; i++){
+
+  sumArrDubai= sumArrDubai + dubai.avgCookiesHour[i];
+}
 // console.log(sumArrDubai);
+
+
+let parentDubai = document.getElementById('dubai');
+
+let h3Dubai= document.createElement('h3');
+
+parentDubai.appendChild(h3Dubai);
+
+h3Dubai.textContent= 'Dubai';
+
+let ulDubai= document.createElement('ul');
+
+parentDubai.appendChild(ulDubai);
+
+for(let i=0; i<workingHours.length; i++){
+
+  let liDubai= document.createElement('li');
+
+  ulDubai.appendChild(liDubai);
+
+  liDubai.textContent= `${workingHours[i]}: ${dubai.avgCookiesHour[i]} cookies`;
+
+}
+// console.log(parentDubai);
 
 
 
@@ -160,8 +248,38 @@ paris.randomCustomerPerHour();
 paris.avgCookiesPerCustomer();
 // console.log(paris.avgCookiesHour);
 
-let sumArrParis= paris.avgCookiesHour[0] + paris.avgCookiesHour[1]+ paris.avgCookiesHour[2]+ paris.avgCookiesHour[3]+ paris.avgCookiesHour[4]+ paris.avgCookiesHour[5]+ paris.avgCookiesHour[6]+ paris.avgCookiesHour[7]+ paris.avgCookiesHour[8]+ paris.avgCookiesHour[9]+ paris.avgCookiesHour[10]+ paris.avgCookiesHour[11]+ paris.avgCookiesHour[12]+ paris.avgCookiesHour[13];
+let sumArrParis=0;
+
+for(let i=0; i<workingHours.length; i++){
+
+  sumArrParis= sumArrParis + paris.avgCookiesHour[i];
+}
 // console.log(sumArrParis);
+
+
+let parentParis = document.getElementById('paris');
+
+let h3Paris= document.createElement('h3');
+
+parentParis.appendChild(h3Paris);
+
+h3Paris.textContent= 'Paris';
+
+let ulParis= document.createElement('ul');
+
+parentParis.appendChild(ulParis);
+
+for(let i=0; i<workingHours.length; i++){
+
+  let liParis= document.createElement('li');
+
+  ulParis.appendChild(liParis);
+
+  liParis.textContent= `${workingHours[i]}: ${paris.avgCookiesHour[i]} cookies`;
+
+}
+// console.log(parentParis);
+
 
 
 
@@ -196,8 +314,40 @@ lima.randomCustomerPerHour();
 lima.avgCookiesPerCustomer();
 // console.log(lima.avgCookiesHour);
 
-let sumArrLima= lima.avgCookiesHour[0] + lima.avgCookiesHour[1]+ lima.avgCookiesHour[2]+ lima.avgCookiesHour[3]+ lima.avgCookiesHour[4]+ lima.avgCookiesHour[5]+ lima.avgCookiesHour[6]+ lima.avgCookiesHour[7]+ lima.avgCookiesHour[8]+ lima.avgCookiesHour[9]+ lima.avgCookiesHour[10]+ lima.avgCookiesHour[11]+ lima.avgCookiesHour[12]+ lima.avgCookiesHour[13];
+let sumArrLima=0;
+
+for(let i=0; i<workingHours.length; i++){
+
+  sumArrLima= sumArrLima + lima.avgCookiesHour[i];
+}
 // console.log(sumArrLima);
+
+
+let parentLima = document.getElementById('lima');
+
+let h3Lima= document.createElement('h3');
+
+parentLima.appendChild(h3Lima);
+
+h3Lima.textContent= 'Lima';
+
+let ulLima= document.createElement('ul');
+
+parentLima.appendChild(ulLima);
+
+for(let i=0; i<workingHours.length; i++){
+
+  let liLima= document.createElement('li');
+
+  ulLima.appendChild(liLima);
+
+  liLima.textContent= `${workingHours[i]}: ${lima.avgCookiesHour[i]} cookies`;
+
+}
+// console.log(parentLima);
+
+
+
 
 
 
