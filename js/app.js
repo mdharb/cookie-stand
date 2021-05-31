@@ -357,6 +357,7 @@ function randomNum(min, max) {
 
 let workingHours= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm','3pm', '4pm', '5pm', '6pm', '7pm'];
 
+
 let shops= [];
 
 
@@ -405,11 +406,92 @@ Shops.prototype.avgCookiesPerCustomer= function(){
 };
 
 
+// ================ TABLE ===========================
+
+
+let parentElement= document.getElementById('salesTable');
+
+let table= document.createElement('table');
+parentElement.appendChild(table);
+
+
+
+
+
+function headerElement(){
+
+  let tableHeader= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm','3pm', '4pm', '5pm', '6pm', '7pm','Daily Location Total'];
+
+  let tHead= document.createElement('thead');
+  table.appendChild(tHead);
+
+  let tr1Element= document.createElement('tr');
+  tHead.appendChild(tr1Element);
+
+  for(let i=0; i<tableHeader.length; i++ ){
+
+    let thElement= document.createElement('th');
+    tr1Element.appendChild(thElement);
+
+    thElement.textContent= tableHeader[i];
+  }
+
+}
+headerElement();
+
+
+
+
+Shops.prototype.render= function(){
+
+  let tBody= document.createElement('tbody');
+  table.appendChild(tBody);
+
+  let tr2Element= document.createElement('tr');
+  tBody.appendChild(tr2Element);
+
+
+  for (let i=0; i<workingHours.length; i++){
+
+    let tdElement= document.createElement('td');
+    tr2Element.append(tdElement);
+    tdElement.textContent= this.avgCookiesHour[i];
+
+  }
+
+  let tdElement1= document.createElement('td');
+  tr2Element.append(tdElement1);
+  tdElement1.textContent= this.total;
+
+};
+
+
+
+function footerElement(){
+
+  let tFoot= document.createElement('tfoot');
+  table.appendChild(tFoot);
+
+  let tr3Element= document.createElement('tr');
+  tFoot.appendChild(tr3Element);
+
+  for(let i=0; i<workingHours.length; i++ ){
+
+    let tdElement1= document.createElement('td');
+    tr3Element.appendChild(tdElement1);
+
+  }
+}
+footerElement();
+
+
+
+
 for (let i = 0; i < shops.length; i++) {
+
 
   shops[i].randomCustomerPerHour();
   shops[i].avgCookiesPerCustomer();
+  shops[i].render();
 
 }
-
-
