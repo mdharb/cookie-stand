@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie.stand</title>
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -24,6 +24,41 @@
     
 
     <main>
+
+    <form id="shopForm">
+    
+     <fieldset>
+
+        <label for= "locationName"> Shop location </label>
+        <input type="text" id="locationName" name="locationName">
+
+        <br></br>
+        
+
+        <label for="minCustPerHour"> Min. customers per hour  </label>
+        <input type="number" id="minCustPerHour" name="minCustPerHour">
+
+        <br></br>
+        
+
+        <label for="maxCustPerHour"> Max. customer per hour </label>
+        <input type="number" id="maxCustPerHour" name="maxCustPerHour">
+
+        <br></br>
+        
+
+        <label for="avgNumCookiesPerHour"> The average number of cookies purchased per customer. </label>
+        <input type="number" step="any" id="avgNumCookiesPerHour" name="avgNumCookiesPerHour">
+
+        <br></br>
+        
+
+        <input type="submit" value="Update">
+
+
+     </fieldset>
+    
+    </form>
     
     <div id="salesTable">
     
