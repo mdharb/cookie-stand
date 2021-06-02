@@ -502,6 +502,47 @@ function footerElement(){
 }
 
 
+// =================================== FORM ==============================================
+
+let shopForm= document.getElementById('shopForm');
+
+shopForm.addEventListener('submit',updatting);
+
+function updatting(event){
+
+  event.preventDefault();
+
+  let locationName= event.target.locationNameField.value;
+
+  let minCustPerHour= event.target.minCustPerHourField.value;
+
+  let maxCustPerHour= event.target.maxCustPerHourField.value;
+
+  let avgNumCookiesPerSale= event.target.avgNumCookiesPerSaleField.value;
+
+  let addedShop= new Shops(locationName,minCustPerHour,maxCustPerHour,avgNumCookiesPerSale);
+
+  // console.log(addedShop);
+
+
+
+  
+  addedShop.randomCustomerPerHour();
+  addedShop.avgCookiesPerCustomer();
+  addedShop.render();
+  
+  // let newShop= document.createElement('td');
+  // table.appendChild(newShop);
+
+  // newShop.textContent= addedShop;
+  parentElement.insertBefore(addedShop,footerElement());
+
+
+}
+
+
+
+
 
 
 
