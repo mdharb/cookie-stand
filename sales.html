@@ -32,25 +32,25 @@
      <fieldset>
 
         <label for= "locationNameField"> Shop location </label>
-        <input type="text" id="locationNameField" name="locationNameField">
+        <input type="text" id="locationNameField" name="locationNameField" pattern=".*[A-Za-z].{3,}" size="15" required >
 
         <br></br>
         
 
         <label for="minCustPerHourField"> Min. customers/hour  </label>
-        <input type="number" id="minCustPerHourField" name="minCustPerHourField">
+        <input type="number" id="minCustPerHourField" name="minCustPerHourField" required  min="1" max="10000">
 
         <br></br>
         
 
         <label for="maxCustPerHourField"> Max. customer/hour </label>
-        <input type="number" id="maxCustPerHourField" name="maxCustPerHourField">
+        <input type="number" id="maxCustPerHourField" name="maxCustPerHourField" required  min="1" max="10000">
 
         <br></br>
         
 
         <label for="avgNumCookiesPerSaleField"> The average cookies purchased/customer. </label>
-        <input type="number" step="any" id="avgNumCookiesPerSaleField" name="avgNumCookiesPerSaleField">
+        <input type="number" step="any" id="avgNumCookiesPerSaleField" name="avgNumCookiesPerSaleField" min="1" max="100000" required>
 
         <br></br>
         

@@ -501,52 +501,6 @@ function footerElement(){
 
 }
 
-
-// =================================== FORM ==============================================
-
-let shopForm= document.getElementById('shopForm');
-
-shopForm.addEventListener('submit',updatting);
-
-function updatting(event){
-
-  event.preventDefault();
-
-  let locationName= event.target.locationNameField.value;
-
-  let minCustPerHour= event.target.minCustPerHourField.value;
-
-  let maxCustPerHour= event.target.maxCustPerHourField.value;
-
-  let avgNumCookiesPerSale= event.target.avgNumCookiesPerSaleField.value;
-
-  let addedShop= new Shops(locationName,minCustPerHour,maxCustPerHour,avgNumCookiesPerSale);
-
-  // console.log(addedShop);
-
-
-
-  
-  addedShop.randomCustomerPerHour();
-  addedShop.avgCookiesPerCustomer();
-  addedShop.render();
-  
-  // let newShop= document.createElement('td');
-  // table.appendChild(newShop);
-
-  // newShop.textContent= addedShop;
-  parentElement.insertBefore(addedShop,footerElement());
-
-
-}
-
-
-
-
-
-
-
-
 for (let i = 0; i < shops.length; i++) {
 
 
@@ -557,3 +511,57 @@ for (let i = 0; i < shops.length; i++) {
 }
 
 footerElement();
+
+// =================================== FORM ==============================================
+
+let shopForm= document.getElementById('shopForm');
+
+shopForm.addEventListener('submit',updatting);
+
+function updatting(event) {
+
+  document.getElementById(shopForm);
+
+  event.preventDefault();
+
+
+  let locationName= event.target.locationNameField.value;
+
+  let minCustPerHour= parseInt(event.target.minCustPerHourField.value);
+
+  let maxCustPerHour= parseInt(event.target.maxCustPerHourField.value);
+
+  let avgNumCookiesPerSale= parseFloat(event.target.avgNumCookiesPerSaleField.value);
+
+  let addedShop= new Shops(locationName,minCustPerHour,maxCustPerHour,avgNumCookiesPerSale);
+
+  if(locationName===''){
+
+    alert('Please insert location');
+  }
+
+  if(minCustPerHour < maxCustPerHour){
+
+    table.textContent='';
+
+    headerElement();
+
+
+    for (let i = 0; i < shops.length; i++) {
+
+
+      shops[i].randomCustomerPerHour();
+      shops[i].avgCookiesPerCustomer();
+      shops[i].render();
+
+    }
+
+    footerElement();
+
+
+  } else {
+
+    alert('Your Min. Customers Per Hour must be less than your Max. Customers Per Hour');
+  }
+
+}
