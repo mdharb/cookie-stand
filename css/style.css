@@ -23,8 +23,6 @@ header h1 {
     font-size: 50px;
     text-align: left;
     
-    
-    
 }
 
 header nav {
@@ -36,7 +34,7 @@ header nav {
 header nav ul {
     
     position: absolute;
-    right: 3%;
+    right: 5%;
     bottom: 15%;
     margin-top: 50px; 
     
@@ -45,7 +43,7 @@ header nav ul {
 
 header nav ul li{
     
-    display: inline;
+    display: inline-block;
     list-style-type: none;
     word-spacing: 15px;
     padding: 10px;
@@ -78,7 +76,7 @@ body {
 
 main p { 
    color: #ce1212;
-   font-family: 'Abel', sans-serif;
+   font-family:Georgia, 'Times New Roman', Times, serif;
    font-weight: bold;
    font-size: large;
 }
@@ -88,6 +86,7 @@ main h3{
     text-align: center;
     font-size: 35px;
     font-family: 'Limelight', cursive;
+    margin-bottom: 50px ;
 }
 
 #locations{

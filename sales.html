@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie.stand</title>
 
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <link rel="stylesheet" href="css/stylesales.css">
+
+    <link rel="stylesheet" href="css/styleData.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
     <header>
-        <h1>Salmon Cookies</h1>
+        <h1>Salmon Cookies Database</h1>
     </header>
 
     <nav>
@@ -24,51 +29,53 @@
             <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
-    
+
 
     <main>
 
-    <form id="shopForm">
-    
-     <fieldset>
+        <form id="shopForm">
 
-        <label for= "locationNameField"> Shop location </label>
-        <input type="text" id="locationNameField" name="locationNameField" pattern=".*[A-Za-z].{3,}" size="15" required >
+            <fieldset>
 
-        <br></br>
-        
+                <label for="locationNameField"> Shop location: </label>
+                <input type="text" id="locationNameField" name="locationNameField" pattern=".*[A-Za-z].{3,}" size="15"
+                    required>
 
-        <label for="minCustPerHourField"> Min. customers/hour  </label>
-        <input type="number" id="minCustPerHourField" name="minCustPerHourField" required  min="1" max="10000">
-
-        <br></br>
-        
-
-        <label for="maxCustPerHourField"> Max. customer/hour </label>
-        <input type="number" id="maxCustPerHourField" name="maxCustPerHourField" required  min="1" max="10000">
-
-        <br></br>
-        
-
-        <label for="avgNumCookiesPerSaleField"> The average cookies purchased/customer. </label>
-        <input type="number" step="any" id="avgNumCookiesPerSaleField" name="avgNumCookiesPerSaleField" min="1" max="100000" required>
-
-        <br></br>
-        
-
-        <input type="submit" value="Update">
+                <br></br>
 
 
-     </fieldset>
-    
-    </form>
-    
-    <div id="salesTable">
-    
-    
+                <label for="minCustPerHourField"> Min. customers/hour: </label>
+                <input type="number" id="minCustPerHourField" name="minCustPerHourField" required min="1" max="10000">
+
+                <br></br>
 
 
-    </div>
+                <label for="maxCustPerHourField"> Max. customer/hour: </label>
+                <input type="number" id="maxCustPerHourField" name="maxCustPerHourField" required min="1" max="10000">
+
+                <br></br>
+
+
+                <label for="avgNumCookiesPerSaleField"> The average cookies purchased/customer: </label>
+                <input type="number" step="any" id="avgNumCookiesPerSaleField" name="avgNumCookiesPerSaleField" min="1"
+                    max="100000" required>
+
+                <br></br>
+
+
+                <input type="submit" id="sButton" value="Update">
+
+
+            </fieldset>
+
+        </form>
+
+        <div id="salesTable">
+
+
+
+
+        </div>
 
 
 
@@ -76,10 +83,12 @@
 
 
     <footer>
-        
-    </footer>
 
     
+
+    </footer>
+
+
     <script src="js/app.js"></script>
 
 </body>
