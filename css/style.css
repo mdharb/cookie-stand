@@ -2,13 +2,14 @@
     box-sizing: border-box;
 }
 
-* h1,h2,h3{
+* h1,h2,h3 {
     color:#4aa96c;
 }
 
+
 header{
     background-color:  #126e82;
-    padding: 30px;
+    padding: 25px;
     background-repeat: no-repeat;
     background-size: fill;
     margin-left: 0;
@@ -17,11 +18,13 @@ header{
 }
 
 header h1 {
-
-    font-family: 'Limelight', cursive;
-   
     
-   
+    font-family: 'Limelight', cursive;
+    font-size: 50px;
+    text-align: left;
+    
+    
+    
 }
 
 header nav {
@@ -33,11 +36,10 @@ header nav {
 header nav ul {
     
     position: absolute;
-    right: 5%;
+    right: 3%;
     bottom: 15%;
-    /* float: right; */
-    margin-top: 50px;
-    margin-right: 20px;   
+    margin-top: 50px; 
+    
     
 }
 
@@ -46,15 +48,17 @@ header nav ul li{
     display: inline;
     list-style-type: none;
     word-spacing: 15px;
+    padding: 10px;
     
 }
 
 header nav ul li a{
     
     text-decoration: none;
-    color: #e84545;
+    color: #d8e3e7;
     font-size: x-large;
     font-weight: bold;
+    
     
 }
 
@@ -63,17 +67,24 @@ header img {
     width: 150px;
     height:60px;
     position: absolute;
-    right: 1030px;
-    top: 7px;
+    top: 20px;
 }
 
 body {
     text-align: center;
     background-color: #d8e3e7;
+    border: 10px solid #126e82;
+}
+
+main p { 
+   color: #ce1212;
+   font-family: 'Abel', sans-serif;
+   font-weight: bold;
+   font-size: large;
 }
 
 main h3{
-
+    
     text-align: center;
     font-size: 35px;
     font-family: 'Limelight', cursive;
@@ -83,21 +94,26 @@ main h3{
     font-family: 'Limelight', cursive; font-size: medium;
 }
 
+
 #useless{
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 #useless img{
-    width: 25%;
+    width: 15%;
     height: auto;
 }
 
 footer {
-    padding: 35px;
+    padding: 30px;
     margin-top: 35px;
     background-color:#126e82 ;
-    color: burlywood;
+    color: #d8e3e7;
+    text-align: left;
+    font-size: larger;
+    font-weight: bolder;
 }
+
 
 
